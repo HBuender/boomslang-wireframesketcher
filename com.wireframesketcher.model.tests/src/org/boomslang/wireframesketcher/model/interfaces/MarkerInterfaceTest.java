@@ -19,54 +19,89 @@ import com.wireframesketcher.model.TextInputSupport;
  *
  */
 public class MarkerInterfaceTest extends TestCase {
-	
-	//ClickSupport tests
+
+	// ClickSupport tests
 	@Test
-	public void testButtonClickSupport(){
-		assertThat(ModelFactory.eINSTANCE.createButton(), instanceOf(ClickSupport.class));
+	public void testButtonClickSupport() {
+		assertThat(ModelFactory.eINSTANCE.createButton(),
+				instanceOf(ClickSupport.class));
 	}
 
 	@Test
-	public void testTableClickSupport(){
-		assertThat(ModelFactory.eINSTANCE.createTable(), instanceOf(ClickSupport.class));
-	}
-	
-	//SelectionSupport tests
-	@Test
-	public void testComboSelectionSupport(){
-		assertThat(ModelFactory.eINSTANCE.createCombo(), instanceOf(SelectionSupport.class));
-	}
-	
-	@Test
-	public void testTableSelectionSupport(){
-		assertThat(ModelFactory.eINSTANCE.createTable(), instanceOf(SelectionSupport.class));
-	}
-	
-	//TextInputSupport tests
-	@Test
-	public void testTableTextInputSupport(){
-		assertThat(ModelFactory.eINSTANCE.createTable(), instanceOf(TextInputSupport.class));
+	public void testTableClickSupport() {
+		assertThat(ModelFactory.eINSTANCE.createTable(),
+				instanceOf(ClickSupport.class));
 	}
 	@Test
-	public void testTextFieldTextInputSupport(){
-		assertThat(ModelFactory.eINSTANCE.createTextField(), instanceOf(TextInputSupport.class));
+	public void testPopupClickSupport() {
+		assertThat(ModelFactory.eINSTANCE.createPopup(),
+				instanceOf(ClickSupport.class));
 	}
-	
-	//DoubleClickSupport tests
+
+	// SelectionSupport tests
 	@Test
-	public void testTableDoubleClickSupport(){
-		assertThat(ModelFactory.eINSTANCE.createTable(), instanceOf(DoubleClickSupport.class));
+	public void testComboSelectionSupport() {
+		assertThat(ModelFactory.eINSTANCE.createCombo(),
+				instanceOf(SelectionSupport.class));
 	}
-	
-	//BooleanSelectSelectionSupport
+
 	@Test
-	public void testCheckboxBooleanSelectSupport(){
-		assertThat(ModelFactory.eINSTANCE.createCheckbox(), instanceOf(BooleanSelectionSupport.class));
+	public void testTableSelectionSupport() {
+		assertThat(ModelFactory.eINSTANCE.createTable(),
+				instanceOf(SelectionSupport.class));
+	}
+
+	// TextInputSupport tests
+	@Test
+	public void testTableTextInputSupport() {
+		assertThat(ModelFactory.eINSTANCE.createTable(),
+				instanceOf(TextInputSupport.class));
+	}
+
+	@Test
+	public void testTextFieldTextInputSupport() {
+		assertThat(ModelFactory.eINSTANCE.createTextField(),
+				instanceOf(TextInputSupport.class));
 	}
 	
 	@Test
-	public void testRadioButtongBooleanSelectSupport(){
-		assertThat(ModelFactory.eINSTANCE.createRadioButton(), instanceOf(BooleanSelectionSupport.class));
+	public void testTextAreaTextInputSupport() {
+		assertThat(ModelFactory.eINSTANCE.createTextArea(),
+				instanceOf(TextInputSupport.class));
+	}
+
+	// DoubleClickSupport tests
+	@Test
+	public void testTableDoubleClickSupport() {
+		assertThat(ModelFactory.eINSTANCE.createTable(),
+				instanceOf(DoubleClickSupport.class));
+	}
+
+	// BooleanSelectSelectionSupport
+	@Test
+	public void testCheckboxBooleanSelectSupport() {
+		assertThat(ModelFactory.eINSTANCE.createCheckbox(),
+				instanceOf(BooleanSelectionSupport.class));
+	}
+
+	// SelectionSupport
+	@Test
+	public void testDateFieldSelectionSupport() {
+		assertThat(ModelFactory.eINSTANCE.createDateField(),
+				instanceOf(SelectionSupport.class));
 	}
 	
+	// SelectionSupport
+	@Test
+	public void testMenuSelectionSupport() {
+		assertThat(ModelFactory.eINSTANCE.createMenu(),
+				instanceOf(SelectionSupport.class));
+	}
+
+	@Test
+	public void testRadioButtongBooleanSelectSupport() {
+		assertThat(ModelFactory.eINSTANCE.createRadioButton(),
+				instanceOf(BooleanSelectionSupport.class));
+	}
+
 }

@@ -17,5 +17,5 @@ package com.wireframesketcher.model;
  * @model
  * @generated
  */
-public interface Popup extends Widget, SelectionSupport, ItemSupport {
+public interface Popup extends Widget, SelectionSupport, ItemSupport, ClickSupport {
 } // Popup

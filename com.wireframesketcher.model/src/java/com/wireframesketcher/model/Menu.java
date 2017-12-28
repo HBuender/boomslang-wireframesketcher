@@ -17,5 +17,5 @@ package com.wireframesketcher.model;
  * @model
  * @generated
  */
-public interface Menu extends Widget, SelectionSupport, IconSupport, ItemSupport, SkinSupport {
+public interface Menu extends Widget, SelectionSupport, IconSupport, ItemSupport, SkinSupport, ClickSupport {
 } // Menu

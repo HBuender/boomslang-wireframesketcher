@@ -296,7 +296,7 @@ public interface WidgetOverrides extends WidgetContainerOverrides, Reference {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attributes</em>' map.
 	 * @see com.wireframesketcher.model.overrides.OverridesPackage#getWidgetOverrides_Attributes()
-	 * @model mapType="com.wireframesketcher.model.overrides.StringToStringMap<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>"
+	 * @model mapType="com.wireframesketcher.model.overrides.StringToStringMap&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;"
 	 * @generated
 	 */
 	EMap<String, String> getAttributes();

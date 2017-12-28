@@ -6,6 +6,7 @@
  */
 package com.wireframesketcher.model.impl;
 
+import com.wireframesketcher.model.ClickSupport;
 import com.wireframesketcher.model.IconDesc;
 import com.wireframesketcher.model.IconSupport;
 import com.wireframesketcher.model.Item;
@@ -251,6 +252,17 @@ public class MenuImpl extends WidgetImpl implements Menu {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void doClick() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void doSelect() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -403,6 +415,11 @@ public class MenuImpl extends WidgetImpl implements Menu {
 				default: return -1;
 			}
 		}
+		if (baseClass == ClickSupport.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -435,6 +452,11 @@ public class MenuImpl extends WidgetImpl implements Menu {
 		if (baseClass == SkinSupport.class) {
 			switch (baseFeatureID) {
 				case ModelPackage.SKIN_SUPPORT__SKIN: return ModelPackage.MENU__SKIN;
+				default: return -1;
+			}
+		}
+		if (baseClass == ClickSupport.class) {
+			switch (baseFeatureID) {
 				default: return -1;
 			}
 		}

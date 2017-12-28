@@ -363,6 +363,7 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseWidget(popup);
 				if (result == null) result = caseSelectionSupport(popup);
 				if (result == null) result = caseItemSupport(popup);
+				if (result == null) result = caseClickSupport(popup);
 				if (result == null) result = caseNoteSupport(popup);
 				if (result == null) result = caseNameSupport(popup);
 				if (result == null) result = caseVisibleSupport(popup);
@@ -377,6 +378,7 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIconSupport(menu);
 				if (result == null) result = caseItemSupport(menu);
 				if (result == null) result = caseSkinSupport(menu);
+				if (result == null) result = caseClickSupport(menu);
 				if (result == null) result = caseNoteSupport(menu);
 				if (result == null) result = caseNameSupport(menu);
 				if (result == null) result = caseVisibleSupport(menu);
@@ -453,6 +455,7 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseSkinSupport(textArea);
 				if (result == null) result = caseLineHeightSupport(textArea);
 				if (result == null) result = caseTextLinksSupport(textArea);
+				if (result == null) result = caseTextInputSupport(textArea);
 				if (result == null) result = caseNoteSupport(textArea);
 				if (result == null) result = caseNameSupport(textArea);
 				if (result == null) result = caseVisibleSupport(textArea);
@@ -825,6 +828,7 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseColorBackgroundSupport(dateField);
 				if (result == null) result = caseColorAlphaSupport(dateField);
 				if (result == null) result = caseSkinSupport(dateField);
+				if (result == null) result = caseSelectionSupport(dateField);
 				if (result == null) result = caseNoteSupport(dateField);
 				if (result == null) result = caseNameSupport(dateField);
 				if (result == null) result = caseVisibleSupport(dateField);

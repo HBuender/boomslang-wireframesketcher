@@ -148,8 +148,8 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Popup" eSuperTypes="#//Widget #//SelectionSupport #//ItemSupport"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Menu" eSuperTypes="#//Widget #//SelectionSupport #//IconSupport #//ItemSupport #//SkinSupport"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Popup" eSuperTypes="#//Widget #//SelectionSupport #//ItemSupport #//ClickSupport"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Menu" eSuperTypes="#//Widget #//SelectionSupport #//IconSupport #//ItemSupport #//SkinSupport #//ClickSupport"/>
   <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//Widget #//SelectionSupport #//BorderSupport #//VerticalScrollbarSupport #//ColorBackgroundSupport #//ColorAlphaSupport #//ListSupport #//FontSupport #//TextAlignmentSupport #//ColorAlternativeSupport #//TextLinksSupport #//ClickSupport #//DoubleClickSupport #//TextInputSupport">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="verticalLines" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true">
@@ -166,7 +166,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tree" eSuperTypes="#//Widget #//BorderSupport #//VerticalScrollbarSupport #//ColorBackgroundSupport #//ColorAlphaSupport #//SelectionSupport #//ItemSupport #//FontSupport"/>
   <eClassifiers xsi:type="ecore:EClass" name="Icon" eSuperTypes="#//Widget #//ColorForegroundSupport #//IconSupport #//LinkSupport"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TextArea" eSuperTypes="#//Widget #//StateSupport #//VerticalScrollbarSupport #//FontSupport #//TextAlignmentSupport #//ColorBackgroundSupport #//ColorAlphaSupport #//ColorBorderSupport #//SkinSupport #//LineHeightSupport #//TextLinksSupport"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextArea" eSuperTypes="#//Widget #//StateSupport #//VerticalScrollbarSupport #//FontSupport #//TextAlignmentSupport #//ColorBackgroundSupport #//ColorAlphaSupport #//ColorBorderSupport #//SkinSupport #//LineHeightSupport #//TextLinksSupport #//TextInputSupport"/>
   <eClassifiers xsi:type="ecore:EClass" name="HScrollbar" eSuperTypes="#//Widget #//ValueSupport #//SkinSupport"/>
   <eClassifiers xsi:type="ecore:EClass" name="VScrollbar" eSuperTypes="#//Widget #//ValueSupport #//SkinSupport"/>
   <eClassifiers xsi:type="ecore:EClass" name="HLine" eSuperTypes="#//Widget #//ColorForegroundSupport #//LineStyleSupport #//SkinSupport"/>
@@ -284,8 +284,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bold" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="italic" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="available" 
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="available" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FontSupport" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="font" lowerBound="1" eType="#//Font"
@@ -401,7 +401,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DateField" eSuperTypes="#//Widget #//StateSupport #//ColorBorderSupport #//ColorBackgroundSupport #//ColorAlphaSupport #//SkinSupport"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DateField" eSuperTypes="#//Widget #//StateSupport #//ColorBorderSupport #//ColorBackgroundSupport #//ColorAlphaSupport #//SkinSupport #//SelectionSupport"/>
   <eClassifiers xsi:type="ecore:EClass" name="VideoPlayer" eSuperTypes="#//Widget #//SkinSupport"/>
   <eClassifiers xsi:type="ecore:EClass" name="Map" eSuperTypes="#//Widget #//SkinSupport"/>
   <eClassifiers xsi:type="ecore:EClass" name="CoverFlow" eSuperTypes="#//Widget #//SkinSupport"/>
@@ -685,7 +685,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="TextLinksSupport" abstract="true" interface="true"
       eSuperTypes="#//ItemSupport"/>
   <eClassifiers xsi:type="ecore:EClass" name="NoteSupport" abstract="true" interface="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="note" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="note" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
       </eAnnotations>

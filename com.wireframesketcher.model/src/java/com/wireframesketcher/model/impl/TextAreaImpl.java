@@ -35,6 +35,7 @@ import com.wireframesketcher.model.StateSupport;
 import com.wireframesketcher.model.TextAlignment;
 import com.wireframesketcher.model.TextAlignmentSupport;
 import com.wireframesketcher.model.TextArea;
+import com.wireframesketcher.model.TextInputSupport;
 import com.wireframesketcher.model.TextLinksSupport;
 import com.wireframesketcher.model.ValueSupport;
 import com.wireframesketcher.model.VerticalScrollbarSupport;
@@ -515,6 +516,17 @@ public class TextAreaImpl extends WidgetImpl implements TextArea {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void doEnter() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 */
 	public boolean isValidState(State state) {
 		return state == State.NORMAL || state == State.DISABLED || state == State.FOCUSED; 
@@ -774,6 +786,11 @@ public class TextAreaImpl extends WidgetImpl implements TextArea {
 				default: return -1;
 			}
 		}
+		if (baseClass == TextInputSupport.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -851,6 +868,11 @@ public class TextAreaImpl extends WidgetImpl implements TextArea {
 			}
 		}
 		if (baseClass == TextLinksSupport.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == TextInputSupport.class) {
 			switch (baseFeatureID) {
 				default: return -1;
 			}

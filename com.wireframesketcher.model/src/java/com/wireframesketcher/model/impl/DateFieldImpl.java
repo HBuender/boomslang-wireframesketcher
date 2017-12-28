@@ -20,6 +20,7 @@ import com.wireframesketcher.model.ModelFactory;
 import com.wireframesketcher.model.ModelPackage;
 import com.wireframesketcher.model.SkinSupport;
 import com.wireframesketcher.model.ResizeMode;
+import com.wireframesketcher.model.SelectionSupport;
 import com.wireframesketcher.model.State;
 import com.wireframesketcher.model.StateSupport;
 import com.wireframesketcher.model.WidgetDescriptor;
@@ -37,6 +38,7 @@ import com.wireframesketcher.model.WidgetDescriptor;
  *   <li>{@link com.wireframesketcher.model.impl.DateFieldImpl#getBackground <em>Background</em>}</li>
  *   <li>{@link com.wireframesketcher.model.impl.DateFieldImpl#getAlpha <em>Alpha</em>}</li>
  *   <li>{@link com.wireframesketcher.model.impl.DateFieldImpl#getSkin <em>Skin</em>}</li>
+ *   <li>{@link com.wireframesketcher.model.impl.DateFieldImpl#getSelection <em>Selection</em>}</li>
  * </ul>
  *
  * @generated
@@ -141,6 +143,26 @@ public class DateFieldImpl extends WidgetImpl implements DateField {
 	 * @ordered
 	 */
 	protected URI skin = SKIN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSelection() <em>Selection</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSelection()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int SELECTION_EDEFAULT = -1;
+
+	/**
+	 * The cached value of the '{@link #getSelection() <em>Selection</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSelection()
+	 * @generated
+	 * @ordered
+	 */
+	protected int selection = SELECTION_EDEFAULT;
 
 	private static final WidgetDescriptor DESCRIPTOR = describe("Date Field", ResizeMode.HORIZONTAL_LITERAL);
 	
@@ -271,6 +293,38 @@ public class DateFieldImpl extends WidgetImpl implements DateField {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getSelection() {
+		return selection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSelection(int newSelection) {
+		int oldSelection = selection;
+		selection = newSelection;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.DATE_FIELD__SELECTION, oldSelection, selection));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void doSelect() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 */
 	public boolean isValidState(State state) {
 		return state == State.NORMAL || state == State.DISABLED || state == State.FOCUSED; 
@@ -294,6 +348,8 @@ public class DateFieldImpl extends WidgetImpl implements DateField {
 				return getAlpha();
 			case ModelPackage.DATE_FIELD__SKIN:
 				return getSkin();
+			case ModelPackage.DATE_FIELD__SELECTION:
+				return getSelection();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -320,6 +376,9 @@ public class DateFieldImpl extends WidgetImpl implements DateField {
 				return;
 			case ModelPackage.DATE_FIELD__SKIN:
 				setSkin((URI)newValue);
+				return;
+			case ModelPackage.DATE_FIELD__SELECTION:
+				setSelection((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -348,6 +407,9 @@ public class DateFieldImpl extends WidgetImpl implements DateField {
 			case ModelPackage.DATE_FIELD__SKIN:
 				setSkin(SKIN_EDEFAULT);
 				return;
+			case ModelPackage.DATE_FIELD__SELECTION:
+				setSelection(SELECTION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -370,6 +432,8 @@ public class DateFieldImpl extends WidgetImpl implements DateField {
 				return alpha != ALPHA_EDEFAULT;
 			case ModelPackage.DATE_FIELD__SKIN:
 				return SKIN_EDEFAULT == null ? skin != null : !SKIN_EDEFAULT.equals(skin);
+			case ModelPackage.DATE_FIELD__SELECTION:
+				return selection != SELECTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -408,6 +472,12 @@ public class DateFieldImpl extends WidgetImpl implements DateField {
 		if (baseClass == SkinSupport.class) {
 			switch (derivedFeatureID) {
 				case ModelPackage.DATE_FIELD__SKIN: return ModelPackage.SKIN_SUPPORT__SKIN;
+				default: return -1;
+			}
+		}
+		if (baseClass == SelectionSupport.class) {
+			switch (derivedFeatureID) {
+				case ModelPackage.DATE_FIELD__SELECTION: return ModelPackage.SELECTION_SUPPORT__SELECTION;
 				default: return -1;
 			}
 		}
@@ -451,6 +521,12 @@ public class DateFieldImpl extends WidgetImpl implements DateField {
 				default: return -1;
 			}
 		}
+		if (baseClass == SelectionSupport.class) {
+			switch (baseFeatureID) {
+				case ModelPackage.SELECTION_SUPPORT__SELECTION: return ModelPackage.DATE_FIELD__SELECTION;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -474,6 +550,8 @@ public class DateFieldImpl extends WidgetImpl implements DateField {
 		result.append(alpha);
 		result.append(", skin: ");
 		result.append(skin);
+		result.append(", selection: ");
+		result.append(selection);
 		result.append(')');
 		return result.toString();
 	}

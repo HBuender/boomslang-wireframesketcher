@@ -6,6 +6,7 @@
  */
 package com.wireframesketcher.model.impl;
 
+import com.wireframesketcher.model.ClickSupport;
 import com.wireframesketcher.model.Item;
 import com.wireframesketcher.model.ItemSupport;
 import com.wireframesketcher.model.ModelPackage;
@@ -126,6 +127,17 @@ public class PopupImpl extends WidgetImpl implements Popup {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void doClick() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void doSelect() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -235,6 +247,11 @@ public class PopupImpl extends WidgetImpl implements Popup {
 				default: return -1;
 			}
 		}
+		if (baseClass == ClickSupport.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -254,6 +271,11 @@ public class PopupImpl extends WidgetImpl implements Popup {
 		if (baseClass == ItemSupport.class) {
 			switch (baseFeatureID) {
 				case ModelPackage.ITEM_SUPPORT__ITEMS: return ModelPackage.POPUP__ITEMS;
+				default: return -1;
+			}
+		}
+		if (baseClass == ClickSupport.class) {
+			switch (baseFeatureID) {
 				default: return -1;
 			}
 		}

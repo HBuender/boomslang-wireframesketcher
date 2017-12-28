@@ -3578,11 +3578,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		popupEClass.getESuperTypes().add(this.getWidget());
 		popupEClass.getESuperTypes().add(this.getSelectionSupport());
 		popupEClass.getESuperTypes().add(this.getItemSupport());
+		popupEClass.getESuperTypes().add(this.getClickSupport());
 		menuEClass.getESuperTypes().add(this.getWidget());
 		menuEClass.getESuperTypes().add(this.getSelectionSupport());
 		menuEClass.getESuperTypes().add(this.getIconSupport());
 		menuEClass.getESuperTypes().add(this.getItemSupport());
 		menuEClass.getESuperTypes().add(this.getSkinSupport());
+		menuEClass.getESuperTypes().add(this.getClickSupport());
 		tableEClass.getESuperTypes().add(this.getWidget());
 		tableEClass.getESuperTypes().add(this.getSelectionSupport());
 		tableEClass.getESuperTypes().add(this.getBorderSupport());
@@ -3620,6 +3622,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		textAreaEClass.getESuperTypes().add(this.getSkinSupport());
 		textAreaEClass.getESuperTypes().add(this.getLineHeightSupport());
 		textAreaEClass.getESuperTypes().add(this.getTextLinksSupport());
+		textAreaEClass.getESuperTypes().add(this.getTextInputSupport());
 		hScrollbarEClass.getESuperTypes().add(this.getWidget());
 		hScrollbarEClass.getESuperTypes().add(this.getValueSupport());
 		hScrollbarEClass.getESuperTypes().add(this.getSkinSupport());
@@ -3718,6 +3721,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		dateFieldEClass.getESuperTypes().add(this.getColorBackgroundSupport());
 		dateFieldEClass.getESuperTypes().add(this.getColorAlphaSupport());
 		dateFieldEClass.getESuperTypes().add(this.getSkinSupport());
+		dateFieldEClass.getESuperTypes().add(this.getSelectionSupport());
 		videoPlayerEClass.getESuperTypes().add(this.getWidget());
 		videoPlayerEClass.getESuperTypes().add(this.getSkinSupport());
 		mapEClass.getESuperTypes().add(this.getWidget());
